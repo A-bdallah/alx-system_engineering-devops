@@ -29,6 +29,7 @@ int main(void)
 		}
 	}
 
+	/* Parent process waits for all child processes to complete */
 	for (i = 0; i < 5; i++)
 	{
 		if (wait(NULL) == -1)
