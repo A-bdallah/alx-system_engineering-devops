@@ -1,0 +1,5 @@
+Host 435189-web-01
+    HostName 107.23.94.191
+    User ubuntu
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
