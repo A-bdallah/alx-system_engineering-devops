@@ -8,4 +8,4 @@ backend webservers
     mode http
     balance roundrobin
     server 435189-web-01 54.88.119.71
-    server 435189-web-02 3.80.18.143
+    server 435189-web-02 54.227.196.168
