@@ -8,5 +8,5 @@ frontend lb-01
 backend webservers
     mode http
     balance roundrobin
-    server 435189-web-01 54.88.119.71
-    server 435189-web-02 54.237.98.230
+    server 435189-web-01 54.88.119.71:80
+    server 435189-web-02 54.237.98.230:80
