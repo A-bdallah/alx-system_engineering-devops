@@ -1,19 +1,12 @@
 #!/usr/bin/python3
-""" requests number of subscribers from reddit api """
-import re
-import requests
+"""
+0-main
+"""
+import sys
 
-
-def number_of_subscribers(subreddit):
-    """ returns the number of subscribers for a given subreddit"""
-
-    url = f"https://www.reddit.com/r/{subreddit}/about/"
-    res = requests.get(url)
-    html = res.text
-    pattern = r'subscribers="([^"]*)"'
-    subscribers = re.search(pattern, html)
-
-    if subscribers:
-        return int(subscribers[0][13:-1])
+if __name__ == '__main__':
+    number_of_subscribers = __import__('0-subs').number_of_subscribers
+    if len(sys.argv) < 2:
+        print("Please pass an argument for the subreddit to search.")
     else:
-        return 0
+        print("{:d}".format(number_of_subscribers(sys.argv[1])))
